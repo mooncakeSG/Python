@@ -1,0 +1,25 @@
+# Basic list comprehension
+numbers = [1, 2, 3, 4, 5]
+squares = [num * num for num in numbers]
+print(f"Squares: {squares}")  # Output: [1, 4, 9, 16, 25]
+
+# List comprehension with condition (filter)
+even_squares = [num * num for num in numbers if num % 2 == 0]
+print(f"Even squares: {even_squares}")  # Output: [4, 16]
+
+# List comprehension with if-else (ternary expression)
+parity = ["even" if num % 2 == 0 else "odd" for num in numbers]
+print(f"Parity: {parity}")  # Output: ['odd', 'even', 'odd', 'even', 'odd']
+
+# Nested list comprehension
+matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+flattened = [num for row in matrix for num in row]
+print(f"Flattened: {flattened}")  # Output: [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+# Creating a dictionary with a dictionary comprehension
+squared_dict = {num: num * num for num in numbers}
+print(f"Squared dict: {squared_dict}")  # Output: {1: 1, 2: 4, 3: 9, 4: 16, 5: 25}
+
+# Creating a set with a set comprehension
+unique_letters = {letter for letter in "mississippi"}
+print(f"Unique letters: {unique_letters}")  # Output: {'m', 'i', 's', 'p'}
