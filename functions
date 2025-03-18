@@ -1,0 +1,79 @@
+Basic Functions
+pythonCopydef simple_function():
+    print("This is a basic function")
+    
+simple_function()  # Calling the function
+Functions with Parameters
+pythonCopydef greet(name):
+    print(f"Hello, {name}!")
+    
+greet("Alex")  # Output: Hello, Alex!
+Functions with Return Values
+pythonCopydef add(a, b):
+    return a + b
+    
+result = add(5, 3)  # result = 8
+Default Parameters
+pythonCopydef greet(name, greeting="Hello"):
+    return f"{greeting}, {name}!"
+    
+print(greet("Alex"))  # Hello, Alex!
+print(greet("Alex", "Hi"))  # Hi, Alex!
+Keyword Arguments
+pythonCopydef describe_person(name, age, job):
+    return f"{name} is {age} years old and works as a {job}."
+    
+print(describe_person(age=30, job="developer", name="Alex"))  # Order doesn't matter
+Variable-Length Arguments (*args)
+pythonCopydef sum_all(*numbers):
+    total = 0
+    for num in numbers:
+        total += num
+    return total
+    
+print(sum_all(1, 2, 3, 4))  # 10
+Variable-Length Keyword Arguments (**kwargs)
+pythonCopydef print_info(**kwargs):
+    for key, value in kwargs.items():
+        print(f"{key}: {value}")
+        
+print_info(name="Alex", age=30, job="developer")
+Lambda Functions (Anonymous Functions)
+pythonCopymultiply = lambda x, y: x * y
+print(multiply(5, 3))  # 15
+Recursive Functions
+pythonCopydef factorial(n):
+    if n <= 1:
+        return 1
+    return n * factorial(n-1)
+    
+print(factorial(5))  # 120
+Nested Functions
+pythonCopydef outer_function(x):
+    def inner_function(y):
+        return x + y
+    return inner_function
+    
+add_five = outer_function(5)
+print(add_five(3))  # 8
+Closures
+pythonCopydef counter():
+    count = 0
+    def increment():
+        nonlocal count
+        count += 1
+        return count
+    return increment
+    
+my_counter = counter()
+print(my_counter())  # 1
+print(my_counter())  # 2
+Generator Functions
+pythonCopydef count_up_to(max):
+    count = 1
+    while count <= max:
+        yield count
+        count += 1
+        
+for number in count_up_to(5):
+    print(number)  # Prints 1, 2, 3, 4, 5
