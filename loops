@@ -1,0 +1,37 @@
+# For loop with a range
+print("For loop with range:")
+for i in range(5):  # Iterates from 0 to 4
+    print(i)
+
+# For loop with a list
+print("\nFor loop with list:")
+fruits = ["apple", "banana", "cherry"]
+for fruit in fruits:
+    print(fruit)
+
+# While loop
+print("\nWhile loop:")
+count = 0
+while count < 5:
+    print(count)
+    count += 1  # Increment counter
+
+# Nested loop
+print("\nNested loop:")
+for i in range(3):
+    for j in range(2):
+        print(f"i={i}, j={j}")
+
+# Loop with break statement
+print("\nLoop with break:")
+for i in range(10):
+    if i == 5:
+        break  # Exit the loop when i equals 5
+    print(i)
+
+# Loop with continue statement
+print("\nLoop with continue:")
+for i in range(10):
+    if i % 2 == 0:
+        continue  # Skip even numbers
+    print(i)
