@@ -7,7 +7,7 @@ def modify_file():
             print("Error: Filename cannot be empty.")
             return
 
-        # Split the filename into directory and base components
+        # Splitting the filename into directory and base components
         dir_name = os.path.dirname(filename)
         base_name = os.path.basename(filename)
         new_base_name = "modified_" + base_name
